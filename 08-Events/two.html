@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Hi i am Inayath</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // this is the example of setTimeout() method.
+
+
+    // setInterval(function () {
+    //     console.log('Hi');
+    // }, 2000)
+
+    const sayInayath = function () {
+        console.log('Hello');
+    }
+    // setTimeout(sayInayath, 2000)
+
+    const changeText = function() { document.querySelector('h1').innerHTML = 'Hello this Mohammed inayath' };
+
+    // setTimeout(changeText, 2000)
+
+    const changeMe =  setTimeout(changeText, 2000)
+    document.querySelector('#stop').addEventListener('click', function() {
+        clearTimeout(changeMe)
+        console.log('Stopped');
+    })
+    
+    // This how we can stop the setTimeout() method using the clearTimeout() method.
+    
+
+    // here we are calling the function sayInayath after 2 seconds or we are providing the reference of the function sayInayath to the setTimeout() method.
+
+    // setInterval(function () {
+    //     console.log('Hi');
+    // }, 2000)
+
+    // The difference between setTimeout() and setInterval() is that setTimeout() executes the function once after the specified time, whereas setInterval() executes the function repeatedly after the specified time.
+</script>
+
+</html>
